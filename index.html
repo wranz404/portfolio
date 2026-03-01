@@ -1,1 +1,74 @@
-<p>я уже устала кодить ЭАХАХАХ</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wranz — начинающий фронтенд-разработчик</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем шрифт Google Fonts для красоты -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#about" class="nav-link">Обо мне</a>
+            <a href="#projects" class="nav-link">Проекты</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Привет, я wranz 👋</h1>
+                <p class="hero-subtitle">Начинающий фронтенд-разработчик. Учусь создавать красивые и удобные сайты.</p>
+                <a href="#projects" class="btn">Смотреть работы</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Обо мне</h2>
+                <div class="about-content">
+                    <p>Я учу фронтенд с нуля. Уже освоила HTML, CSS, Git и GitHub. Сейчас изучаю JavaScript и React. Люблю, когда код работает, а интерфейс радует глаз.</p>
+                    <p>В свободное время читаю технические статьи и делаю маленькие проекты для портфолио.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Мои проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 class="project-title">Сайт-визитка</h3>
+                        <p class="project-desc">Тот самый сайт, который ты сейчас видишь. Сделан на чистом HTML и CSS.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3 class="project-title">Скоро будет React</h3>
+                        <p class="project-desc">Следующий проект перепишу на React и TypeScript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="section-title">Свяжись со мной</h2>
+                <div class="contacts-links">
+                    <a href="https://github.com/wranz404" target="_blank" class="contact-link">GitHub</a>
+                    <a href="mailto:neumannsasha@mail.ru" class="contact-link">Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026, wranz. Сделано с ❤️ и Люмом.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
