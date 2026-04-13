@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wranz — frontend & freelance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="main-container">
+            <h1>Привет, я wranz!</h1>
+            <p>Превращаю идеи в красивые и рабочие веб-интерфейсы.</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Навыки -->
+        <section id="skills">
+            <div class="main-container">
+                <h2>Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <p>HTML, CSS, JavaScript, адаптивная верстка, DOM, работа с API.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>ML</h3>
+                        <p>Пока в процессе обучения: анализ данных, основы нейросетей и Python.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Обо мне -->
+        <section id="about">
+            <div class="main-container">
+                <h2>Обо мне</h2>
+                <p>Меня зовут wranz, мне 22 года. Я активно осваиваю frontend-разработку и делаю первые шаги в машинном обучении. Готова взять ваш заказ — особенно если это поможет мне расти и пополнить портфолио. Работаю ответственно, быстро и с душой 💙</p>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section id="projects">
+            <div class="main-container">
+                <h2>Мои проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Сайт-визитка</h3>
+                        <p>Минимализм, адаптивность и чистый код.</p>
+                        <a href="#" class="btn">Посмотреть</a>
+                    </div>
+                    <div class="project-card highlight" onclick="openAuthModal()">
+                        <h3>✨ Готовы начать проект?</h3>
+                        <p>Расскажите — и я реализую вашу идею уже завтра.</p>
+                        <button class="btn">Предложить проект</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="testimonials">
+            <div class="main-container">
+                <h2>Что говорят клиенты</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="quote">"wranz быстро поняла задачу и сделала сайт точно в срок. Очень рекомендую!"</p>
+                        <p class="author">— Алексей, фотограф</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"Минимализм, чистый код и отличная коммуникация. Работаю с ней дальше!"</p>
+                        <p class="author">— Мария, блогер</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Переключатель темы -->
+        <div class="theme-toggle">
+            <button onclick="toggleTheme()">
+                <span>🌙</span><span>Тёмная тема</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="openTab('login')">Войти</button>
+                <button class="tab-btn" onclick="openTab('register')">Регистрация</button>
+            </div>
+            <form id="login" class="auth-form">
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Пароль" required />
+                <button type="submit" class="btn">Войти</button>
+            </form>
+            <form id="register" class="auth-form" style="display:none;">
+                <input type="text" placeholder="Имя" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Пароль" required />
+                <button type="submit" class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Личный кабинет -->
+    <div id="dashboard" class="dashboard" style="display: none;">
+        <div class="dash-header">
+            <h2>Личный кабинет</h2>
+            <button onclick="logout()" class="btn small">Выйти</button>
+        </div>
+        <div class="dash-menu">
+            <button class="dash-btn active" onclick="showSection('new-order')">+ Новый заказ</button>
+            <button class="dash-btn" onclick="showSection('active-orders')">Активные</button>
+            <button class="dash-btn" onclick="showSection('completed-orders')">Выполненные</button>
+        </div>
+        <div id="new-order" class="dash-content">
+            <h3>Опишите ваш проект</h3>
+            <form action="https://submit-form.com/InT8SEfgn" method="POST">
+                <input type="hidden" name="_redirect" value="https://wranz404.github.io/portfolio/thanks.html">
+                <input type="hidden" name="_email.to" value="neumannsasha@mail.ru">
+                <textarea name="message" placeholder="Например: нужен сайт-визитка для фотографа..." required></textarea>
+                <button type="submit" class="btn">Отправить заказ</button>
+            </form>
+        </div>
+        <div id="active-orders" class="dash-content" style="display:none;">
+            <h3>Активные заказы</h3>
+            <p>Пока нет активных заказов. Ожидаем подтверждения...</p>
+        </div>
+        <div id="completed-orders" class="dash-content" style="display:none;">
+            <h3>Выполненные заказы</h3>
+            <p>Пока ничего не завершено. Скоро появится!</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="main-container">
+            <p>&copy; 2026 wranz. Все права защищены.</p>
+            <p class="contacts-inline">
+                Контакты: 
+                <a href="https://github.com/wranz404" target="_blank">GitHub</a>, 
+                <a href="https://t.me/s_wranz" target="_blank">Telegram @s_wranz</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
