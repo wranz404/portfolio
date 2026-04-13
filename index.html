@@ -3,69 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wranz — начинающий фронтенд-разработчик</title>
+    <title>wranz - frontend developer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Подключаем шрифт Google Fonts для красоты -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#about" class="nav-link">Обо мне</a>
-            <a href="#projects" class="nav-link">Проекты</a>
-            <a href="#contacts" class="nav-link">Контакты</a>
-        </nav>
+    <header class="hero">
+        <div class="main-container">
+            <h1>Привет, я wranz!</h1>
+            <p>Я превращаю идеи в рабочие и красивые веб-интерфейсы.</p>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">Привет, я wranz 👋</h1>
-                <p class="hero-subtitle">Начинающий фронтенд-разработчик. Учусь создавать красивые и удобные сайты.</p>
-                <a href="#projects" class="btn">Смотреть работы</a>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">Обо мне</h2>
-                <div class="about-content">
-                    <p>Я учу фронтенд с нуля. Уже освоила HTML, CSS, Git и GitHub. Сейчас изучаю JavaScript и React. Люблю, когда код работает, а интерфейс радует глаз.</p>
-                    <p>В свободное время читаю технические статьи и делаю маленькие проекты для портфолио.</p>
+    <main class="main-content">
+        <section id="skills">
+            <div class="main-container">
+                <h2>Мои навыки</h2>
+                <div class="skills-grid">
+                        <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <p>Верстка, адаптивный дизайн, работа с DOM.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>ML</h3>
+                        <p>Анализ данных, основы машинного обучения.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Мои проекты</h2>
+        <section id="about">
+            <div class="main-container">
+                <h2>Обо мне</h2>
+                <p>Меня зовут wranz, мне 22 года. Я целенаправленно иду в IT-сферу. В настоящее время активно осваиваю frontend-разработку и основы машинного обучения. Я ищу возможности для получения практического опыта и готова брать заказы для пополнения портфолио.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="main-container">
+                <h2>Мои проекты</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3 class="project-title">Сайт-визитка</h3>
-                        <p class="project-desc">Тот самый сайт, который ты сейчас видишь. Сделан на чистом HTML и CSS.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3 class="project-title">Скоро будет React</h3>
-                        <p class="project-desc">Следующий проект перепишу на React и TypeScript.</p>
+                        <h3>Интерактивный сайт-визитка</h3>
+                        <p>Мой первый полноценный проект, демонстрирующий навыки верстки и базового JavaScript.</p>
+                        <a href="#" class="btn">Посмотреть</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacts" class="contacts">
-            <div class="container">
-                <h2 class="section-title">Свяжись со мной</h2>
-                <div class="contacts-links">
-                    <a href="https://github.com/wranz404" target="_blank" class="contact-link">GitHub</a>
-                    <a href="mailto:neumannsasha@mail.ru" class="contact-link">Email</a>
+        <section id="contacts">
+            <div class="main-container">
+                <h2>На связи</h2>
+                <p>Готова обсудить ваш проект или вакансию.</p>
+                <div class="contact-links">
+                    <a href="https://github.com/wranz404" target="_blank" class="contact-btn">GitHub</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026, wranz. Сделано с ❤️ и Люмом.</p>
+    <footer>
+        <div class="main-container">
+            <p>&copy; 2026 wranz. Все права защищены.</p>
         </div>
     </footer>
 
