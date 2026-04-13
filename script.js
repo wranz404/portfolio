@@ -105,6 +105,6 @@ document.querySelector("#new-order .btn").addEventListener("click", function () 
     }
 
     // Имитация успешной отправки
-    alert("Заказ отправлен! Спасибо, я свяжусь с вами в ближайшее время.");
+    document.getElementById('login').submit();
     textarea.value = "";
 });
