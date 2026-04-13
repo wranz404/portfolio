@@ -375,20 +375,21 @@ body.dark-theme .auth-form input:focus {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
-/* === Личный кабинет === */
+/* === Личный кабинет — новый стиль === */
 .dashboard {
     padding: 32px 20px;
-    max-width: 780px;
+    max-width: 800px;
     margin: 40px auto;
     background: white;
     border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
 body.dark-theme .dashboard {
     background: #1e1e1e;
-    border-color: rgba(255, 255, 255, 0.08);
+    border-color: #333;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -396,17 +397,16 @@ body.dark-theme .dashboard {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee;
+    padding: 0 24px 20px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 body.dark-theme .dash-header {
-    border-color: #444;
+    border-color: #333;
 }
 
 .dash-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: #1a1a1a;
 }
@@ -417,22 +417,29 @@ body.dark-theme .dash-header h2 {
 
 .dash-menu {
     display: flex;
-    gap: 10px;
-    margin-bottom: 24px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 20px;
+    gap: 8px;
     flex-wrap: wrap;
+}
+
+body.dark-theme .dash-menu {
+    background: #2a2a2a;
 }
 
 .dash-btn {
     flex: 1;
-    min-width: 120px;
-    padding: 10px 16px;
-    background: #f5f5f5;
+    min-width: 110px;
+    padding: 10px 14px;
+    background: transparent;
     color: #555;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 0.95rem;
     font-weight: 500;
+    cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
 }
@@ -440,32 +447,41 @@ body.dark-theme .dash-header h2 {
 .dash-btn.active {
     background: #1a1a1a;
     color: white;
-    border-color: #1a1a1a;
+    font-weight: 600;
 }
 
 body.dark-theme .dash-btn {
-    background: #2a2a2a;
     color: #bbb;
-    border-color: #555;
 }
 
 body.dark-theme .dash-btn.active {
     background: #fff;
     color: #111;
-    border-color: #fff;
 }
 
 .dash-content {
-    padding: 24px;
+    padding: 28px 24px;
     background: #fcfcfc;
     border: 1px solid #eee;
-    border-radius: 10px;
-    min-height: 160px;
+    border-radius: 12px;
+    margin: 0 20px 20px;
+    min-height: 180px;
 }
 
 body.dark-theme .dash-content {
     background: #222;
     border-color: #444;
+}
+
+.dash-content h3 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+body.dark-theme .dash-content h3 {
+    color: #f0f0f0;
 }
 
 .dash-content textarea {
@@ -474,16 +490,12 @@ body.dark-theme .dash-content {
     padding: 14px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-family: inherit;
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    resize: vertical;
     background: white;
+    color: #333;
+    resize: vertical;
     transition: border 0.3s ease;
-}
-
-.dash-content textarea:focus {
-    outline: none;
-    border-color: #999;
 }
 
 body.dark-theme .dash-content textarea {
@@ -492,13 +504,19 @@ body.dark-theme .dash-content textarea {
     border-color: #555;
 }
 
-body.dark-theme .dash-content textarea:focus {
-    border-color: #888;
+.dash-content textarea:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
-.btn.small {
-    padding: 6px 12px;
-    font-size: 0.9rem;
+body.dark-theme .dash-content textarea:focus {
+    border-color: #888;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.btn {
+    margin-top: 16px;
 }
 
 /* === Переключатель темы === */
