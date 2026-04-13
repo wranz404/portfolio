@@ -1,52 +1,3 @@
-// === Открыть/закрыть модальное окно ===
-function openAuthModal() {
-    document.getElementById("authModal").style.display = "flex";
-}
-
-function closeAuthModal() {
-    document.getElementById("authModal").style.display = "none";
-}
-
-// === Переключение между вкладками: Вход / Регистрация ===
-function openTab(tabName) {
-    const forms = document.querySelectorAll('.auth-form');
-    forms.forEach(form => form.style.display = 'none');
-
-    const tabs = document.querySelectorAll('.tab-btn');
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    document.getElementById(tabName).style.display = 'block';
-    event.currentTarget.classList.add('active');
-}
-
-// === Имитация входа ===
-document.getElementById("login").addEventListener("submit", function(e) {
-    e.preventDefault();
-    document.querySelector(".hero").style.display = "none";
-    document.querySelector(".main-content").style.display = "none";
-    document.getElementById("authModal").style.display = "none";
-    document.getElementById("dashboard").style.display = "block";
-});
-
-// === Выход ===
-function logout() {
-    document.getElementById("dashboard").style.display = "none";
-    document.querySelector(".hero").style.display = "block";
-    document.querySelector(".main-content").style.display = "block";
-}
-
-// === Показ разделов кабинета ===
-function showSection(id) {
-    const contents = document.querySelectorAll('.dash-content');
-    contents.forEach(content => content.style.display = 'none');
-
-    const buttons = document.querySelectorAll('.dash-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    document.getElementById(id).style.display = 'block';
-    event.currentTarget.classList.add('active');
-}
-
 // === Переключение темы ===
 function toggleTheme() {
     const body = document.body;
@@ -76,7 +27,7 @@ window.onload = function () {
     }
 
     // Анимация появления секций
-    const sections = document.querySelectorAll(".main-content section, #testimonials");
+    const sections = document.querySelectorAll(".main-content section");
     sections.forEach((sec, i) => {
         setTimeout(() => {
             sec.style.opacity = 1;
@@ -84,7 +35,7 @@ window.onload = function () {
     });
 
     // Анимация карточек
-    const cards = document.querySelectorAll(".skill-card, .project-card, .testimonial-card");
+    const cards = document.querySelectorAll(".skill-card, .testimonial-card");
     cards.forEach((card, i) => {
         card.style.opacity = 0;
         setTimeout(() => {
